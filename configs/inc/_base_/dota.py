@@ -12,11 +12,6 @@ custom_hooks = [
 ]
 
 model = dict(
-    train_cfg=dict(
-        rpn_proposal=dict(
-            max_per_img=2000,
-        ),
-    ),
     test_cfg=dict(
         rpn=dict(
             nms_pre=2000,

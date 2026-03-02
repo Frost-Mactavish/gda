@@ -44,7 +44,6 @@ train_pipeline = [
 ]
 train_dataloader = dict(
     dataset=dict(
-        times=3,
         dataset=dict(
             datasets=[
                 dict(
@@ -71,9 +70,5 @@ val_dataloader = dict(
 test_dataloader = val_dataloader
 
 optim_wrapper = dict(
-    paramwise_cfg=dict(
-        custom_keys={
-            "backbone": dict(lr_mult=0.1, decay_mult=1.0),
-        },
-    ),
+    paramwise_cfg=dict(custom_keys={"backbone": dict(lr_mult=0.1, decay_mult=1.0)})
 )

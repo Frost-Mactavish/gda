@@ -5,6 +5,8 @@ data_root = "/data/my_code/dataset/VOC"
 
 backend_args = None
 
+model = dict(train_cfg=dict(rpn_proposal=dict(max_per_img=1000)))
+
 train_pipeline = [
     dict(type="LoadImageFromFile", backend_args=backend_args),
     dict(type="LoadAnnotations", with_bbox=True),
