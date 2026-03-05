@@ -585,7 +585,7 @@ class DOTAMetric(BaseMetric):
         mean_ap = float(np.mean(ap_list)) if len(ap_list) > 0 else 0.0
 
         eval_results = OrderedDict()
-        eval_results['mAP'] = round(mean_ap, 4)
-        eval_results['classwise_AP'] = [round(float(ap), 4) for ap in ap_list]
+        eval_results['mAP'] = round(mean_ap, 3)
+        eval_results['classwise_AP'] = [round(float(ap), 3) for ap in ap_list]
 
         return eval_results

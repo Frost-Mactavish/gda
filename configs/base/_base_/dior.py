@@ -1,6 +1,7 @@
 dataset_type = "DIORDataset"
 data_root = "/data/my_code/dataset/DIOR"
 work_dir = "log/DIOR/JOINT"
+step = 0
 
 backend_args = None
 launcher = "pytorch"
